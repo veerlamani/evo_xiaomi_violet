@@ -119,3 +119,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_app_phase_offset_ns=500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000
+
+# Improve touch detection
+PRODUCT_PROPERTY_OVERRIDES += \
+    touch.pressure.scale=0.001 \
+    persist.sys.ui.hw=1 \
+    view.scroll_friction=10 \
+    touch.size.calibration=diameter \
+    touch.size.scale=1 \
+    touch.size.bias=0 \
+    touch.size.isSummed=0 \
+    touch.pressure.scale=0.001 \
+    touch.orientation.calibration=none \
+    touch.distance.calibration=none \
+    touch.distance.scale=0 \
+    touch.coverage.calibration=box \
+    touch.gestureMode=spots \
+    MultitouchSettleInterval=1ms \
+    MultitouchMinDistance=1px \
+    TapInterval=1ms \
+    TapSlop=1px
+
+# Dirac algo tsx 9/12
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.storeSettings=1 \
+    persist.dirac.acs.ignore_error=1
+
+# Dirac headset effect
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.soundfx.dirac=true \
+    persist.audio.dirac.speaker=true
