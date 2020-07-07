@@ -14,6 +14,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some common EvolutionX stuff.
+CUSTOM_BUILD_TYPE := OFFICIAL
+EVO_MAINTAINER := YasinAli
+EVO_SUPPORT_URL := https://t.me/EvolutionXViolet
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_WIFI_EXT := true
